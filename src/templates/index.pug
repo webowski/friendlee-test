@@ -9,5 +9,54 @@ block main
 
 		<h1>Рассчитайте стоимость автомобиля в&nbsp;лизинг</h1>
 
+		<div class="form-grid">
+
+			<div class="form-field">
+				<label for="price" class="form-label">Стоимость автомобиля</label>
+
+				<div class="input-numeric">
+					<input type="text" class="form-input input-numeric__text" id="price" value="3300000">
+					<div class="form-input__units">₽</div>
+					<input type="range" class="input-numeric__range" min="1500000" max="10000000" value="1500000" step="100000">
+				</div>
+			</div>
+
+			<div class="form-field">
+				<label for="firstPayment" class="form-label">Первоначальный взнос</label>
+
+				<div class="input-numeric">
+					<input type="text" class="form-input input-numeric__text" id="firstPayment" value="420000">
+					<div class="form-input__subinfo">13%</div>
+				</div>
+				<input type="range" class="input-numeric__range" min="10" max="60" value="13" step="1">
+			</div>
+
+			<div class="form-field">
+				<label for="firstPayment" class="form-label">Срок лизинга</label>
+
+				<div class="input-numeric">
+					<input type="text" class="form-input input-numeric__text" id="firstPayment" value="60">
+					<div class="form-input__units">мес.</div>
+				</div>
+				<input type="range" class="input-numeric__range" min="1500000" max="10000000" value="1500000" step="100000">
+			</div>
+
+			<div class="form-field">
+				<div class="form-label">Сумма договора лизинга</div>
+
+				<div class="form-value">4 467 313 ₽</div>
+			</div>
+
+			<div class="form-field">
+				<div class="form-label">Сумма договора лизинга</div>
+
+				<div class="form-value">4 467 313 ₽</div>
+			</div>
+
+			<div class="form-action">
+				<button class="button">Оставить заявку</button>
+			</div>
+
 		</div>
+
 	</div>
