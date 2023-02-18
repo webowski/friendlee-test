@@ -2,7 +2,6 @@
 	@if ($type == normal) {
 		max-width: var(--containerMax);
 	}
-	box-sizing: content-box;
 	padding-left: var(--sidePadding);
 	padding-right: var(--sidePadding);
 	margin-left: auto;
