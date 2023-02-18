@@ -33,6 +33,7 @@ h1, .h1 {
 	line-height: 1.2;
 	font-weight: 700;
 	font-size: 2.5rem;
+	font-family: var(--fontExtra);
 
 	@include mediaUp(md) {
 		font-size: 2.5rem;

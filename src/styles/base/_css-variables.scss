@@ -2,9 +2,10 @@
 // ---------------------
 :root {
 	// Text
-		--fontMain:             #{$fontMain};
-		--fontSize:             1rem;
-		--lineHeight:           1.57;
+	--fontMain:             #{$fontMain};
+	--fontExtra:            #{$fontExtra};
+	--fontSize:             1rem;
+	--lineHeight:           1.57;
 
 	// Color
 		--brand:                #{$blue};

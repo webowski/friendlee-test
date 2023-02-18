@@ -1,7 +1,21 @@
-// @font-face {
-// 	font-family: 'font-name';
-//   src: local('font-name');
-// 	// ascent-override: 100%;
-// 	// descent-override: 20%;
-// 	// line-gap-override: 0%;
-// }
+@font-face {
+	font-family: 'Gilroy';
+	src: local('Gilroy Regular'), local('Gilroy-Regular'),
+			url('../fonts/Gilroy/Gilroy-Regular.woff2') format('woff2'),
+			url('../fonts/Gilroy/Gilroy-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	ascent-override: 95%;
+	descent-override: 25%;
+}
+
+@font-face {
+	font-family: 'Nekst';
+	src: local('Nekst Black'), local('Nekst-Black'),
+			url('../fonts/Nekst/Nekst-Black.woff2') format('woff2'),
+			url('../fonts/Nekst/Nekst-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	ascent-override: 95%;
+	descent-override: 25%;
+}
