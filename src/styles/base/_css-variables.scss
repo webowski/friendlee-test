@@ -19,7 +19,7 @@
 
 	// Dimensions
 	--containerMax:         #{$containerMax};
-	--sidePadding:          clamp(1.25rem, 4vw, 4rem);
+	--sidePadding:          1.25rem;
 
 	// Shape
 		--radius-xs:            2px;
@@ -32,4 +32,12 @@
 		--duration-lg:          .3s;
 		--duration-xl:          .6s;
 		--duration-xxl:         1s;
+
+	@include mediaUp(md) {
+		--sidePadding:          2.25rem;
+	}
+
+	@include mediaUp(lg) {
+		--sidePadding:          3rem;
+	}
 }

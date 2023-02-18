@@ -1,13 +1,47 @@
-.form-input {
-	border-radius: 4px;
+.form-grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 16px;
+
+	@include mediaUp(md) {
+		gap: 2rem;
+	}
+
+	@include mediaUp(lg) {
+		gap: 2.75rem 2rem;
+	}
 }
 
-.form-input,
-input.form-input {
+.form-field {
+	position: relative;
+}
+
+.form-field,
+.form-result,
+.form-action {
+	grid-column: span 12;
+}
+
+.form-result {
+	@include mediaUp(md) {
+		grid-column: span 6;
+	}
+}
+
+.form-field,
+.form-result,
+.form-action {
+	@include mediaUp(lg) {
+		grid-column: span 4;
+	}
+}
+
+.form-input {
 	width: 100%;
 	height: auto;
 	padding: 8px 10px;
 	border: 1px solid var(--border);
+	border-radius: 4px;
 	display: block;
 	background-color: var(--lightest);
 	background-repeat: no-repeat;
@@ -34,7 +68,6 @@ input.form-input {
 	}
 }
 
-.form-input:focus,
 .form-input:focus-within {
 	background-color: var(--bg);
 	color: var(--intense);
@@ -45,8 +78,4 @@ input.form-input {
 	transition:
 		color var(--duration-sm) linear,
 		transform var(--duration-sm) linear;
-}
-
-.form-field {
-	position: relative;
 }
