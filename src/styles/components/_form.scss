@@ -1,0 +1,52 @@
+.form-input {
+	border-radius: 4px;
+}
+
+.form-input,
+input.form-input {
+	width: 100%;
+	height: auto;
+	padding: 8px 10px;
+	border: 1px solid var(--border);
+	display: block;
+	background-color: var(--lightest);
+	background-repeat: no-repeat;
+	box-shadow: none;
+	transition:
+		background-color var(--duration-md) linear,
+		border-color var(--duration-md) linear,
+		color var(--duration-md) linear;
+	resize: none;
+	color: var(--intense);
+	font-size: 14px;
+	line-height: 1.2;
+	font-family: inherit;
+	font-weight: 400;
+
+	@include placeholder() {
+		color: var(--minor);
+	}
+
+	@include mediaUp(md) {
+		padding: 8px 10px;
+		font-size: 15px;
+		line-height: 1.25;
+	}
+}
+
+.form-input:focus,
+.form-input:focus-within {
+	background-color: var(--bg);
+	color: var(--intense);
+	outline: none;
+}
+
+.form-label {
+	transition:
+		color var(--duration-sm) linear,
+		transform var(--duration-sm) linear;
+}
+
+.form-field {
+	position: relative;
+}
