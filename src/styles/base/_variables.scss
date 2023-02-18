@@ -21,17 +21,17 @@ $orange:                    #FF9514;
 
 // Breakpoints
 // ---------------------
-	$sm:    0px;
-	$md:    768px;
-	$lg:    1120px;
-	$xl:    1440px;
+$sm:    0px;
+$md:    768px;
+$lg:    1120px;
+$xl:    1440px;
 
-	$breakpoints: (
-		sm: $sm,
-		md: $md,
-		lg: $lg,
-		xl: $xl,
-	);
+$breakpoints: (
+	sm: $sm,
+	md: $md,
+	lg: $lg,
+	xl: $xl,
+);
 
 
 // Container
