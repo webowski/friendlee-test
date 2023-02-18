@@ -8,27 +8,14 @@
 	--lineHeight:           1.57;
 
 	// Color
-		--brand:                #{$blue};
-		--primary:              #{$blue};
-		--success:              #{$green};
-		--accent:               #{$yellow};
-		--danger:               #{$red};
-		--intense:              #{$black};
-		--major:                #{$gray-700};
-		--minor:                #{$gray-500};
-		--muted:                #{$gray-400};
-		--light:                #{$gray-300};
-		--lighter:              #{$gray-200};
-		--lightest:             #{$gray-100};
-		--disabled:             #{$gray-300};
-		--inverse:              #{$white};
-		--bg:                   #{$white};
-		--bgAlter:              #{$gray-400};
-		--border:               #{$gray-300};
-
-	// Shadow
-		--shadow-sm:            #{0 .375rem .5rem rgba($gray-700, .25)};
-		--shadow-md:            #{0 .5rem 1rem rgba($gray-700, .25)};
+	--primary:              #{$orange};
+	--intense:              #{$black};
+	--major:                #{$gray-700};
+	--minor:                #{$gray-600};
+	--light:                #{$gray-250};
+	--lighter:              #{$gray-200};
+	--lightest:             #{$gray-100};
+	--bg:                   #{$white};
 
 	// Dimensions
 	--containerMax:         #{$containerMax};
@@ -46,27 +33,4 @@
 		--duration-lg:          .3s;
 		--duration-xl:          .6s;
 		--duration-xxl:         1s;
-}
-
-[data-theme="dark"] {
-		--brand:                #{$blue};
-		--success:              #{$green};
-		--accent:               #{$yellow};
-		--danger:               #{$red};
-		--intense:              #{$white};
-		--major:                #{$gray-200};
-		--minor:                #{$gray-400};
-		--muted:                #{$gray-500};
-		--light:                #{$gray-600};
-		--lighter:              #{$gray-700};
-		--lightest:             #{$gray-800};
-		--disabled:             #{$gray-400};
-		--inverse:              #{$gray-700};
-		--bg:                   #{$gray-800};
-		--bgAlter:              #{$black};
-		--border:               #{$gray-300};
-
-	// Shadow
-		--shadow-sm:            #{0 8px 20px -8px rgba(0,0,0,.6)};
-		--shadow-md:            #{0 .5rem 1rem rgba($black, .5)};
 }
