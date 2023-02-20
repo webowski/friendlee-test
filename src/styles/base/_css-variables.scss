@@ -15,6 +15,7 @@
 	--light:                #{$gray-250};
 	--lighter:              #{$gray-200};
 	--lightest:             #{$gray-100};
+	--inverse:              #{$white};
 	--bg:                   #{$white};
 
 	// Dimensions
@@ -22,16 +23,11 @@
 	--sidePadding:          1.25rem;
 
 	// Shape
-		--radius-xs:            2px;
-		--radius-sm:            4px;
-		--radius-md:            6px;
+	--radius-xs:            4px;
+	--radius-md:            16px;
 
 	// Animation
-		--duration-sm:          .12s;
-		--duration-md:          .2s;
-		--duration-lg:          .3s;
-		--duration-xl:          .6s;
-		--duration-xxl:         1s;
+	--duration-sm:          .12s;
 
 	@include mediaUp(md) {
 		--sidePadding:          2.25rem;

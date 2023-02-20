@@ -13,44 +13,45 @@ block main
 
 			<div class="form-field">
 				<label for="price" class="form-label">Стоимость автомобиля</label>
-
 				<div class="input-numeric">
-					<input type="text" class="form-input input-numeric__text" id="price" value="3300000">
-					<div class="form-input__units">₽</div>
-					<input type="range" class="input-numeric__range" min="1500000" max="10000000" value="1500000" step="100000">
+					<input type="text" class="input-numeric__input" id="price" value="3 300 000">
+					<div class="input-numeric__units">₽</div>
+					<div class="toddler input-numeric__toddler" data-min="1500000" data-max="10000000" data-step="100000" style="--value: 50%">
+						<div class="toddler__handle" tabindex="0"></div>
+					</div>
 				</div>
 			</div>
 
 			<div class="form-field">
 				<label for="firstPayment" class="form-label">Первоначальный взнос</label>
-
 				<div class="input-numeric">
-					<input type="text" class="form-input input-numeric__text" id="firstPayment" value="420000">
-					<div class="form-input__subinfo">13%</div>
-					<input type="range" class="input-numeric__range" min="10" max="60" value="13" step="1">
+					<input type="text" class="input-numeric__input" id="firstPayment" value="420 000 ₽">
+					<div class="input-numeric__subinfo">13%</div>
+					<div class="toddler input-numeric__toddler" data-min="1500000" data-max="10000000" data-step="100000" style="--value: 13%">
+						<div class="toddler__handle" tabindex="0"></div>
+					</div>
 				</div>
 			</div>
 
 			<div class="form-field">
-				<label for="firstPayment" class="form-label">Срок лизинга</label>
-
+				<label for="leasingTerm" class="form-label">Срок лизинга</label>
 				<div class="input-numeric">
-					<input type="text" class="form-input input-numeric__text" id="firstPayment" value="60">
-					<div class="form-input__units">мес.</div>
-					<input type="range" class="input-numeric__range" min="1500000" max="10000000" value="1500000" step="100000">
+					<input type="text" class="input-numeric__input" id="leasingTerm" value="60">
+					<div class="input-numeric__units">мес.</div>
+					<div class="toddler input-numeric__toddler" data-min="1500000" data-max="10000000" data-step="100000" style="--value: 50%">
+						<div class="toddler__handle" tabindex="0"></div>
+					</div>
 				</div>
 			</div>
 
 			<div class="form-result">
-				<div class="form-label">Сумма договора лизинга</div>
-
-				<div class="form-value">4 467 313 ₽</div>
+				<div class="form-label form-label--alter">Сумма договора лизинга</div>
+				<div class="form-value"><span class="">4 467 313</span> ₽</div>
 			</div>
 
 			<div class="form-result">
-				<div class="form-label">Сумма договора лизинга</div>
-
-				<div class="form-value">4 467 313 ₽</div>
+				<div class="form-label form-label--alter">Ежемесячный платеж от</div>
+				<div class="form-value"><span class="">114 455</span> ₽</div>
 			</div>
 
 			<div class="form-action">

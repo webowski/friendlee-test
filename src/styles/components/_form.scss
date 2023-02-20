@@ -1,14 +1,17 @@
 .form-grid {
+	--columns: 2;
 	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	gap: 16px;
+	grid-template-columns: repeat(var(--columns), 1fr);
+	gap: 1.5rem;
 
 	@include mediaUp(md) {
-		gap: 2rem;
+		--columns: 4;
+		gap: 3rem 2rem;
 	}
 
 	@include mediaUp(lg) {
-		gap: 2.75rem 2rem;
+		--columns: 12;
+		gap: 3.125rem 2rem;
 	}
 }
 
@@ -19,11 +22,19 @@
 .form-field,
 .form-result,
 .form-action {
-	grid-column: span 12;
+	grid-column: 1/-1;
 }
 
 .form-result {
+	margin-top: .25rem;
+
 	@include mediaUp(md) {
+		margin-top: .25rem;
+		grid-column: span 2;
+	}
+
+	@include mediaUp(lg) {
+		margin-top: 0;
 		grid-column: span 6;
 	}
 }
@@ -36,46 +47,119 @@
 	}
 }
 
-.form-input {
-	width: 100%;
-	height: auto;
-	padding: 8px 10px;
-	border: 1px solid var(--border);
-	border-radius: 4px;
-	display: block;
-	background-color: var(--lightest);
-	background-repeat: no-repeat;
-	box-shadow: none;
-	transition:
-		background-color var(--duration-md) linear,
-		border-color var(--duration-md) linear,
-		color var(--duration-md) linear;
-	resize: none;
-	color: var(--intense);
-	font-size: 14px;
-	line-height: 1.2;
-	font-family: inherit;
-	font-weight: 400;
-
-	@include placeholder() {
-		color: var(--minor);
-	}
+.form-action {
+	margin-top: .5rem;
+	align-self: flex-end;
 
 	@include mediaUp(md) {
-		padding: 8px 10px;
-		font-size: 15px;
-		line-height: 1.25;
+		margin-top: .25rem;
 	}
-}
 
-.form-input:focus-within {
-	background-color: var(--bg);
-	color: var(--intense);
-	outline: none;
+	@include mediaUp(lg) {
+		margin-top: 0;
+	}
 }
 
 .form-label {
-	transition:
-		color var(--duration-sm) linear,
-		transform var(--duration-sm) linear;
+	width: fit-content;
+	display: block;
+	margin-bottom: .5rem;
+	font-size: .875rem;
+	line-height: 1.25;
+
+	@include mediaUp(md) {
+		margin-bottom: 1.5rem;
+		font-size: 1rem;
+	}
 }
+
+.form-label.form-label--alter {
+	margin-bottom: .125rem;
+
+	@include mediaUp(md) {
+		margin-bottom: .5rem;
+	}
+}
+
+.form-value {
+	font-family: var(--fontExtra);
+	font-weight: 900;
+	font-size: 1.375rem;
+	line-height: .9;
+
+	@include mediaUp(md) {
+		font-size: 3.375rem;
+	}
+}
+
+.input-numeric {
+	--padding-x: 20px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	border: none;
+	border-radius: var(--radius-md);
+	background-color: var(--lightest);
+
+	@include mediaUp(md) {
+		--padding-x: 24px;
+	}
+}
+
+.input-numeric__input {
+	padding: 16px 12px 16px var(--padding-x);
+	min-width: 0;
+	flex: 1 1 auto;
+	border: none;
+	background: none transparent;
+	border-top-left-radius: var(--radius-md);
+	border-bottom-left-radius: var(--radius-md);
+	color: var(--minor);
+	font-size: 1.375rem;
+	line-height: 1.75rem;
+	font-family: var(--fontExtra);
+	font-weight: 900;
+
+	&:focus {
+		outline: none;
+	}
+
+	@include mediaUp(md) {
+		padding: 16px 12px 16px var(--padding-x);
+		font-size: 1.875rem;
+	}
+}
+
+.input-numeric__units,
+.input-numeric__subinfo {
+	font-family: var(--fontExtra);
+	pointer-events: none;
+	color: var(--minor);
+}
+
+.input-numeric__subinfo {
+	padding: 15px;
+	margin: 7px;
+	background-color: var(--lighter);
+	border-radius: var(--radius-md);
+	font-size: 1.25rem;
+	line-height: 1.2;
+}
+
+.input-numeric__units {
+	font-size: 1.375rem;
+	line-height: 1.2;
+	padding-right: var(--padding-x);
+
+	@include mediaUp(md) {
+		font-size: 1.875rem;
+	}
+}
+
+.toddler.input-numeric__toddler {
+	position: absolute;
+	bottom: -9px;
+	left: var(--padding-x);
+	right: var(--padding-x);
+}
+

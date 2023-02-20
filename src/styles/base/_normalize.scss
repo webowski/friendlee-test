@@ -48,6 +48,6 @@ button {
 }
 
 :focus-visible {
+	outline: 4px solid rgba(#FF9514,.3);
 	border-radius: var(--radius-xs);
-	outline: 4px solid rgba(50,151,211,.3);
 }

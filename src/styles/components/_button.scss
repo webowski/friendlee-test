@@ -1,31 +1,87 @@
 .button {
-	width: auto;
-	max-width: 100%;
-	padding: .5rem 1.125rem;
+	width: 100%;
+	padding: 16px 24px 20px;
 	display: inline-flex;
-	border: 1px solid transparent;
+	justify-content: center;
+	border: none;
+	border-radius: 40px;
+	position: relative;
 	appearance: none;
-	background: var(--inverse) none;
-	border-radius: var(--radius-sm);
-	color: var(--major);
-	font-size: 1rem;
-	line-height: 1.25;
-	font-weight: 500;
+	background: var(--primary) none;
+	color: var(--inverse);
+	font-family: var(--fontExtra);
+	font-weight: 900;
+	font-size: 1.375rem;
+	line-height: 1.5rem;
 	text-decoration: none;
-	text-align: center;
-	text-transform: none;
 	cursor: pointer;
-	white-space: nowrap;
+	user-select: none;
 	transition:
 		background-color var(--duration-sm),
-		border-color var(--duration-sm),
 		color var(--duration-sm),
-		box-shadow var(--duration-sm),
 		transform var(--duration-sm);
+
+	@include mediaUp(md) {
+		padding: 14px 24px 18px;
+		font-size: 1.875rem;
+		line-height: 2.25rem;
+	}
 }
 
 .button:hover {
+	background-color: var(--intense);
 }
 
 .button:active {
+	background-color: var(--minor);
+}
+
+.button:disabled {
+	background-color: rgba($orange, .5);
+	cursor: default;
+}
+
+.button--pending {
+	background-color: var(--primary) !important;
+	pointer-events: none;
+	cursor: default;
+	color: transparent;
+}
+
+.button__spinner {
+	--size: 30px;
+  animation: pending-rotate 2s linear infinite;
+  z-index: 2;
+  position: absolute;
+  top: calc(50% - var(--size) * .5);
+  left: calc(50% - var(--size) * .5);
+  width: var(--size);
+  height: var(--size);
+}
+
+.button__spinner-circle {
+	stroke: var(--inverse);
+	stroke-linecap: round;
+	animation: pending-dash 1.5s ease-in-out infinite;
+}
+
+@keyframes pending-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pending-dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
 }
